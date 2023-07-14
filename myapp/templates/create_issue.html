@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Issue</title>
+</head>
+<body>
+    <h1>Create Issue</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="user_id">User ID:</label>
+        <input type="text" name="user_id" id="user_id" required><br><br>
+
+        <label for="location">Location:</label>
+        <input type="text" name="location" id="location" required><br><br>
+
+        <label for="problem">Problem:</label>
+        <textarea name="problem" id="problem" required></textarea><br><br>
+
+        <label for="time">Time:</label>
+        <input type="datetime-local" name="time" id="time" required><br><br>
+
+        <input type="submit" value="Create Issue">
+    </form>
+</body>
+</html>
